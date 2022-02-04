@@ -18,7 +18,7 @@ title: M O D I L O G
 subtitle: "A free HTML5 agency template"
 url: "http://eoskandlv.github.io" # the base hostname & protocol for your site
 # baseurl: "/the/subpath/of/your/site" # Set this value to "" if you want your site to be root
-baseurl: "/airspace-jekyll"
+baseurl: "/eoskandlv"
 cover: "/assets/cover.png"
 logo: "/assets/logo.png"
 
