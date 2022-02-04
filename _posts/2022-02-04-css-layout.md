@@ -1,5 +1,6 @@
 ---
 layout: post
+published: true
 title: css layout
 subtitle: display, float, position, flexbox 
 categories: markdown
