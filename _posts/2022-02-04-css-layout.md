@@ -2,7 +2,7 @@
 layout: post
 title: css layout
 subtitle: display, float, position, flexbox 
-categories: css
+categories: markdown
 tags: [css]
 ---
 
