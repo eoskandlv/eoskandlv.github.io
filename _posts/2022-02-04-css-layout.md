@@ -29,6 +29,7 @@ block 면(영역) / inline 선(흐름) 으로 보면 이해가 쉬울 것 같다
 - **width를 따로 선언한 경우**, 남은 공간은 margin이 채워짐<br>(영역을 침범 당하지 않기 위해서)
 - block의 경우 width, height, padding, border, margin을 모두 사용할 수 있다.
 - block type을 **가운데 정렬하는 방법 : margin : 0 auto** 👉 margin top과 bottom은 0을 주고 right와 left는 auto (남는 px를 자동으로 채움)를 준다는 것이다. *별도로 margin left : auto;만 주면 block은 오른쪽 정렬이 된다.*
+
 #### ✍️ 예시) 부모의 width가 1000px이라고 가정 후, 자식 width를 600px로 지정하면 남은 400px이 자동적으로 margin으로 채워진다.
 
 ### 💁‍♀️  <span style="background-color:#F2CB31; color:#2c2c2c;">inline</span>
@@ -37,6 +38,7 @@ block 면(영역) / inline 선(흐름) 으로 보면 이해가 쉬울 것 같다
 - text 작성과 동일한 맥락, 옆으로 더 쓸 공간이 없으면 자동적으로 밑 줄로 내려감
 - margin과 padding의 top,bottom을 사용할 수 없다.
 - **width, height, padding-top, padding-bottom, border-top, border-bottom, margin-top, margin-bottom** 사용이 **불가**하다.(위 아래의 크기를 변경하는것은 안된다 기존 영역을 덮어버리기 때문에)
+
 #### 🧐 width가 안되는 이유 : 인라인 요소의 width를 부모 요소가 다 담을 수 없는 상황일 때 애매해지기 때문에 width가 있는데 인라인 요소를 끊어서 밑 줄에 내려 놓을 수도, 부모를 오버해서 나갈 수도 없기 때문이다.
 
 
@@ -82,8 +84,10 @@ items의 여러 줄 바꿈을 설정해준다.
 | nowrap(default) | 모든 items이 한 줄에 배치가 된다. |
 | wrap | items를 여러 줄로 배치해 넘치면 아래로 떨어지게 한다. (width,height 지정 가능) |
 | wrap-reverse | items를 wrap의 역 방향으로 여러 줄로 배치. |
+
 > #### flex-wrap : nowrap; (기본값) 👉 줄 바꾸지 않음
 부모 width가 600px이고 자식이 300px씩 가지고 있다면, 기본적으로 300px+300px로 2개만 올 수 있지만 flex-wrap : nowrap;을 사용하면 감싸지 않고 자식의 사이즈를 줄여 한 줄로 정렬한다. (200px씩 한 줄로) 
+
 #### flex-wrap : wrap; 👉 줄 바꿈
 부모 width가 600px이고 자식이 300px씩 가지고 있다면 300px+300px로 2개가 오고 밑 줄에 300px이 떨어진다. 한 줄에 모두 정렬할 때 공간이 부족하면 여러 줄을 만든다.
 
@@ -142,11 +146,14 @@ float를 사용하는 이유 : block요소들을 가로배치 하기 위해
 ## <span style="color:#2c2c2c;">🤔 float 사용 후 붕괴된 레이아웃 복구하는 법</span>
 float 속성이 적용된 요소의 주위로 다른 요소들이 흐르게 되는데 이를 방지하기 위해 속성을 **해제**해야한다.
 🚨 float	 해지하지 않을 경우 요소가 겹처 다음에 오는 것을 뒤덮는 현상이 발생할 수 있다.
+
 ### 💁‍♀️  <span style="background-color:#F2CB31; color:#2c2c2c;">clear : left/right/both</span>
 - 다음으로 오는 형제 요소에 clear : left/right/both를 추가해 해제한다.
 - 단, 다음으로 오는 형제 요소에는 float 속성이 적용 되어있지 않아야한다.
+
 ### 💁‍♀️  <span style="background-color:#F2CB31; color:#2c2c2c;">overflow : hidden/auto</span>
 - 부모에게 overflow : hidden을 적용하면 float로 인해 집나간 자식을 찾아온다.
+
 ### 💁‍♀️  <span style="background-color:#F2CB31; color:#2c2c2c;">Clearfix</span>
 - 가장 모범적으로 하는 방법 clear는 float로 인하여 망가진 속성을 고치기 위해 만들어진 것이다.(부모요소에 clearfix **class**를 추가 class=clearfix)
 - clear : left 👉 left로 float된 요소를 찾아 영향을 받지 않는다.
@@ -174,15 +181,16 @@ float 속성이 적용된 요소의 주위로 다른 요소들이 흐르게 되�
 
 ### 💁‍♀️  <span style="background-color:#F2CB31; color:#2c2c2c;">static</span>
 - 모든 요소의 default 포지션 값
+
 ### 💁‍♀️  <span style="background-color:#F2CB31; color:#2c2c2c;">relative</span>
-- **이동의 기준점** : 자기 자신이 본래 있었던 자리 / 사용하게되면 float처럼 붕 뜨는 것처럼 되지만, float와는 다르게 자신의 원래 위치를 기억하고 있음
+- **이동의 기준점** : 자기 자신이 본래 있었던 자리 / 사용하게되면 float처럼 붕 뜨는 것처럼 되지만, float와는 다르게 자신의 원래 위치를 기억하고 있음<br>
 > position : relative; <br>top : 20px; 👉 top을 기준으로 20px 떨어짐.<br>right : 200px; 👉 right을 기준으로 200px 떨어짐.
 
 ### 💁‍♀️  <span style="background-color:#F2CB31; color:#2c2c2c;">absolute</span>
 - **자신이 정하고 싶은 기준점(부모)을 새로 정할 수 있음** <-> float는 부모를 자신이 고를 수 없고 자기 직계부모를 기준점으로 둔다.
 - 선택의 기준 : position이 static이 아닌 요소를 기준으로 해서 자기 자신을 위치시킨다.
 - 자신이 어떤 조상 요소를 기준으로 삼아서 이동할 것인지 기준점 설정이 반드시 필요하다. (대게 주변 요소에 아무런 영향을 끼치지 않는 relative를 설정한다)
-
+<br>
 > #### float와 유사한 점
 - display가  block으로 바뀐다.
 - 길을 막지 못하는 block(margin은 안생김)
@@ -198,7 +206,9 @@ float 속성이 적용된 요소의 주위로 다른 요소들이 흐르게 되�
 position을 사용해서 해당 요소가 붕뜨게 되었을 경우, 자기 자신이 z축으로 어느 위치에 있는지를 설정하는 속성이다. 설정하는 이유는 2개의 요소를 position으로 띄운 경우 한 요소가 다른 한 요소의 일부분을 덮으려고 할 때 사용한다.
 **z-index : 2/ z-index : 1 이 경우 2가 1보다 위에 있으므로 2가 1을 덮어버린다.**
 
-#### 🙆‍♀️ <span style="color:#F15F5F;"> 특정 장소에 고정시켜 놓아야 한다 = position<br>🙆‍♀️  두 요소를 옆으로 배치시켜야 한다 = float</span>
+#### 🙆‍♀️ <span style="color:#F15F5F;"> 특정 장소에 고정시켜 놓아야 한다 = position</span>
+
+#### 🙆‍♀️ <span style="color:#F15F5F;">두 요소를 옆으로 배치시켜야 한다 = float</span>
 
 <br>
 
