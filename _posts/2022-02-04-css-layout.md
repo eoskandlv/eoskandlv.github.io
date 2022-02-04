@@ -4,7 +4,7 @@ published: true
 title: css layout
 subtitle: display, float, position, flexbox 
 categories: markdown
-tags: [css]
+tags: [example, markdown]
 ---
 
 # 📖 CSS layout
