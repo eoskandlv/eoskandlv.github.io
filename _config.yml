@@ -27,7 +27,8 @@
 title: M O D I L O G
 email: eoskandlv@gmail.com
 author: MODI
-
+future: true
+published: true
 # Copyright setting
 # You can use any html code, currently below placeholders are available:
 # * current year: {currentYear}
