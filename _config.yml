@@ -46,7 +46,8 @@ author-name: M O D I
 # URL for the Image of the Author
 author-image: /assets/images/modi.png
 # 60 Words About the Author
-author-about: I am Modi. I have over 3 year of experience UI/UX/WEB desinger, I have been the frontend developer since 2021.<br> My mbit is 'ISTP', I am aim for high efficiency and short time. My motto is <strong>'Go with the flow'</strong> :)<br>도태되지 않는 멋쟁이 프론트 개발자가 되기 위해! 열심히 공부하고 꾸준히 기록하는 개발 블로그  
+author-about: MODI 블로그
+# author-about: I am Modi. I have over 3 year of experience UI/UX/WEB desinger, I have been the frontend developer since 2021.<br> My mbit is 'ISTP', I am aim for high efficiency and short time. My motto is <strong>'Go with the flow'</strong> :)<br>도태되지 않는 멋쟁이 프론트 개발자가 되기 위해! 열심히 공부하고 꾸준히 기록하는 개발 블로그  
 # URL to the Author's Profile (i.e., Github, Twitter, Stackoverflow, etc)
 author-url: https://github.com/eoskandlv
 
